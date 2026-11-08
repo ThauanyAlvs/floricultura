@@ -1,0 +1,55 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #fff9f5;
+  --foreground: #5c4540;
+  --muted: #7d4354;
+  --card: #ffffff;
+  --accent: #f7c6b5;
+  --accent-soft: #f6dde1;
+  --sage: #a8b9a0;
+  --wine: #7d4354;
+  --brown: #5c4540;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(180deg, #fff9f5 0%, #fffdfb 100%);
+  color: var(--foreground);
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  color: var(--brown);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+.container-shell {
+  @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+.section-title {
+  @apply text-3xl font-semibold tracking-tight text-brown md:text-4xl;
+}
+
+.card-surface {
+  @apply rounded-[28px] border border-[#f3e8e2] bg-white shadow-soft;
+}
+
+.bg-rose-glow {
+  background: linear-gradient(135deg, rgba(247,198,181,0.2), rgba(246,221,225,0.7));
+}
