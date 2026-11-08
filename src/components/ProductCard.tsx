@@ -37,16 +37,16 @@ export function ProductCard({ product }: { product: Product }) {
           </div>
           <div className="text-right">
             <p className="text-lg font-semibold text-wine">{formatPrice(product.price)}</p>
-            {product.oldPrice && <p className="text-xs text-[#9a7b79] line-through">{formatPrice(product.oldPrice)}</p>}
+            {product.oldPrice && <p className="text-xs text-[#945D70] line-through">{formatPrice(product.oldPrice)}</p>}
           </div>
         </div>
-        <p className="text-sm leading-6 text-[#6d5150]">{product.shortDescription}</p>
+        <p className="text-sm leading-6 text-[#43383A]">{product.shortDescription}</p>
         <div className="flex gap-3">
-          <button onClick={() => addToCart(product, 1)} className="flex flex-1 items-center justify-center gap-2 rounded-full bg-brown px-4 py-3 text-sm font-semibold text-white transition hover:bg-wine">
+          <button onClick={() => addToCart(product, 1)} className="flex flex-1 items-center justify-center gap-2 rounded-full bg-wine px-4 py-3 text-sm font-semibold text-white transition hover:bg-rose">
             <ShoppingCart className="h-4 w-4" />
             Adicionar
           </button>
-          <Link href={`/produto/${product.id}`} className="rounded-full border border-[#f0e1dc] px-4 py-3 text-sm font-medium text-brown">
+          <Link href={`/produto/${product.id}`} className="rounded-full border border-[#EDE2D0] px-4 py-3 text-sm font-medium text-brown">
             Ver mais
           </Link>
         </div>

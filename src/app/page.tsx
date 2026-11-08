@@ -29,15 +29,15 @@ export default function HomePage() {
 
   return (
     <>
-      <section className="bg-rose-glow border-b border-[#f3eae5]">
+      <section className="bg-rose-glow border-b border-[#EDE2D0]">
         <div className="container-shell grid items-center gap-10 py-16 md:grid-cols-2 md:py-24">
           <div>
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-wine">PEACH FLOWERS</p>
             <h1 className="max-w-xl text-5xl leading-tight text-brown md:text-6xl">Flores para todos os momentos especiais.</h1>
-            <p className="mt-6 max-w-lg text-lg leading-8 text-[#604b49]">Descubra a delicadeza de presentear com flores. Buquês e arranjos preparados com carinho para tornar cada ocasião inesquecível.</p>
+            <p className="mt-6 max-w-lg text-lg leading-8 text-[#43383A]">Descubra a delicadeza de presentear com flores. Buquês e arranjos preparados com carinho para tornar cada ocasião inesquecível.</p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
-              <Link href="/catalogo" className="inline-flex items-center gap-2 rounded-full bg-brown px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-wine">Explorar coleção</Link>
-              <Link href="/catalogo?category=Flores%20do%20campo" className="rounded-full border border-[#eadad4] bg-white/70 px-6 py-3.5 text-sm font-semibold text-brown">Ver categorias</Link>
+              <Link href="/catalogo" className="inline-flex items-center gap-2 rounded-full bg-wine px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-rose">Explorar coleção</Link>
+              <Link href="/catalogo?category=Flores%20do%20campo" className="rounded-full border border-[#EDE2D0] bg-white/70 px-6 py-3.5 text-sm font-semibold text-brown">Ver categorias</Link>
             </div>
           </div>
           <div className="relative">
@@ -54,7 +54,7 @@ export default function HomePage() {
         </div>
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {categories.map((category) => (
-            <Link href={`/catalogo?category=${encodeURIComponent(category.slug)}`} key={category.title} className="group overflow-hidden rounded-[28px] border border-[#f3e9e3] bg-white shadow-soft">
+            <Link href={`/catalogo?category=${encodeURIComponent(category.slug)}`} key={category.title} className="group overflow-hidden rounded-[28px] border border-[#EDE2D0] bg-white shadow-soft">
               <div className="relative h-72 overflow-hidden">
                 <img src={category.image} alt={category.title} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#3d2c2b]/60 to-transparent" />
@@ -82,7 +82,7 @@ export default function HomePage() {
                     <p className="text-lg font-semibold text-wine">R$ {product.price.toFixed(2).replace('.', ',')}</p>
                   </div>
                 </div>
-                <p className="text-sm leading-6 text-[#6d5150]">{product.shortDescription}</p>
+                <p className="text-sm leading-6 text-[#43383A]">{product.shortDescription}</p>
               </div>
             </article>
           ))}

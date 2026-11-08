@@ -46,41 +46,41 @@ export default function LoginPage() {
 
   return (
     <div className="container-shell py-16">
-      <div className="mx-auto max-w-md rounded-[30px] border border-[#f1e2df] bg-white p-8 shadow-soft">
+      <div className="mx-auto max-w-md rounded-[30px] border border-[#EDE2D0] bg-white p-8 shadow-soft">
         <p className="mb-2 text-sm font-semibold uppercase tracking-[0.24em] text-wine">Login</p>
         <h1 className="text-4xl text-brown">Bem-vindo(a) novamente</h1>
-        <p className="mt-3 text-sm text-[#6b4d4a]">Entre para acompanhar pedidos, favoritos e finalizar sua compra com segurança.</p>
+        <p className="mt-3 text-sm text-[#43383A]">Entre para acompanhar pedidos, favoritos e finalizar sua compra com segurança.</p>
 
         <form onSubmit={handleSubmit} className="mt-8 space-y-5">
           <div>
-            <label className="mb-2 block text-sm text-[#5f4745]">E-mail</label>
-            <input type="email" value={email} onChange={(event) => setEmail(event.target.value)} className="w-full rounded-full border border-[#f1e2df] bg-[#fffaf8] px-4 py-3 outline-none" placeholder="seu@email.com" required />
+            <label className="mb-2 block text-sm text-[#43383A]">E-mail</label>
+            <input type="email" value={email} onChange={(event) => setEmail(event.target.value)} className="w-full rounded-full border border-[#EDE2D0] bg-[#FAF8F3] px-4 py-3 outline-none" placeholder="seu@email.com" required />
           </div>
           <div>
-            <label className="mb-2 block text-sm text-[#5f4745]">Senha</label>
+            <label className="mb-2 block text-sm text-[#43383A]">Senha</label>
             <div className="relative">
               <input
                 type={showPassword ? 'text' : 'password'}
                 value={password}
                 onChange={(event) => setPassword(event.target.value)}
-                className="w-full rounded-full border border-[#f1e2df] bg-[#fffaf8] px-4 py-3 pr-12 outline-none"
+                className="w-full rounded-full border border-[#EDE2D0] bg-[#FAF8F3] px-4 py-3 pr-12 outline-none"
                 placeholder="••••••••"
                 required
               />
-              <button type="button" onClick={() => setShowPassword((value) => !value)} className="absolute right-3 top-1/2 -translate-y-1/2 text-[#6b4d4a]" aria-label="Mostrar ou ocultar senha">
+              <button type="button" onClick={() => setShowPassword((value) => !value)} className="absolute right-3 top-1/2 -translate-y-1/2 text-[#43383A]" aria-label="Mostrar ou ocultar senha">
                 {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
               </button>
             </div>
           </div>
 
-          {error && <p className="rounded-2xl bg-[#fbe8eb] px-3 py-2 text-sm text-[#7a3a46]">{error}</p>}
+          {error && <p className="rounded-2xl bg-[#EDE2D0] px-3 py-2 text-sm text-[#682C40]">{error}</p>}
 
-          <button type="submit" disabled={loading} className="w-full rounded-full bg-brown px-5 py-3.5 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-70">
+          <button type="submit" disabled={loading} className="w-full rounded-full bg-wine px-5 py-3.5 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-70">
             {loading ? 'Entrando...' : 'Entrar'}
           </button>
         </form>
 
-        <div className="mt-6 flex items-center justify-between text-sm text-[#6b4d4a]">
+        <div className="mt-6 flex items-center justify-between text-sm text-[#43383A]">
           <Link href="/recuperar-senha" className="text-wine">Esqueci a senha</Link>
           <Link href="/cadastro" className="font-medium text-brown">Criar conta</Link>
         </div>

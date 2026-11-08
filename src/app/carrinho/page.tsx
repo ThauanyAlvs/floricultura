@@ -30,9 +30,9 @@ export default function CartPage() {
       </div>
 
       {cart.length === 0 ? (
-        <div className="rounded-[30px] border border-[#f1e2df] bg-white p-10 text-center shadow-soft">
-          <p className="text-lg text-[#5d4b4a]">Seu carrinho está vazio.</p>
-          <Link href="/catalogo" className="mt-5 inline-flex rounded-full bg-brown px-6 py-3 text-sm font-semibold text-white">Continuar comprando</Link>
+        <div className="rounded-[30px] border border-[#EDE2D0] bg-white p-10 text-center shadow-soft">
+          <p className="text-lg text-[#43383A]">Seu carrinho está vazio.</p>
+          <Link href="/catalogo" className="mt-5 inline-flex rounded-full bg-wine px-6 py-3 text-sm font-semibold text-white">Continuar comprando</Link>
         </div>
       ) : (
         <div className="grid gap-8 lg:grid-cols-[1.3fr_0.7fr]">
@@ -42,7 +42,7 @@ export default function CartPage() {
               if (!product) return null;
 
               return (
-                <div key={item.productId} className="flex flex-col gap-4 rounded-[28px] border border-[#f3e7e3] bg-white p-5 shadow-soft sm:flex-row">
+                <div key={item.productId} className="flex flex-col gap-4 rounded-[28px] border border-[#EDE2D0] bg-white p-5 shadow-soft sm:flex-row">
                   <div className="relative h-28 w-full overflow-hidden rounded-[20px] sm:w-28">
                     <img src={product.images[0]} alt={product.name} className="h-full w-full object-cover" />
                   </div>
@@ -50,15 +50,15 @@ export default function CartPage() {
                     <div>
                       <p className="text-xs uppercase tracking-[0.18em] text-wine">{product.category}</p>
                       <h2 className="mt-2 text-xl text-brown">{product.name}</h2>
-                      <p className="mt-2 text-sm text-[#6b504e]">{formatPrice(product.price)} un.</p>
+                      <p className="mt-2 text-sm text-[#43383A]">{formatPrice(product.price)} un.</p>
                     </div>
                     <div className="flex items-center gap-3">
-                      <div className="flex items-center overflow-hidden rounded-full border border-[#f1e2df] bg-[#fffaf8]">
+                      <div className="flex items-center overflow-hidden rounded-full border border-[#EDE2D0] bg-[#FAF8F3]">
                         <button onClick={() => updateCartQuantity(item.productId, item.quantity - 1)} className="px-3 py-2"><Minus className="h-4 w-4" /></button>
                         <span className="w-10 text-center text-sm font-medium">{item.quantity}</span>
                         <button onClick={() => updateCartQuantity(item.productId, item.quantity + 1)} className="px-3 py-2"><Plus className="h-4 w-4" /></button>
                       </div>
-                      <button onClick={() => removeFromCart(item.productId)} className="rounded-full border border-[#f2e3df] p-2.5 text-[#7d434d]"><Trash2 className="h-4 w-4" /></button>
+                      <button onClick={() => removeFromCart(item.productId)} className="rounded-full border border-[#EDE2D0] p-2.5 text-[#945D70]"><Trash2 className="h-4 w-4" /></button>
                     </div>
                   </div>
                 </div>
@@ -66,18 +66,18 @@ export default function CartPage() {
             })}
           </div>
 
-          <aside className="rounded-[30px] border border-[#f1e2df] bg-white p-6 shadow-soft">
+          <aside className="rounded-[30px] border border-[#EDE2D0] bg-white p-6 shadow-soft">
             <h2 className="text-2xl text-brown">Resumo</h2>
-            <div className="mt-6 space-y-4 text-sm text-[#5d4b4a]">
+            <div className="mt-6 space-y-4 text-sm text-[#43383A]">
               <div className="flex justify-between"><span>Subtotal</span><span>{formatPrice(subtotal)}</span></div>
               <div className="flex justify-between"><span>Frete</span><span>{formatPrice(shipping)}</span></div>
               <div className="flex justify-between"><span>Desconto</span><span>- {formatPrice(0)}</span></div>
-              <div className="border-t border-[#f1e2df] pt-4 text-base font-semibold text-brown">
+              <div className="border-t border-[#EDE2D0] pt-4 text-base font-semibold text-brown">
                 <div className="flex justify-between"><span>Total</span><span>{formatPrice(total)}</span></div>
               </div>
             </div>
-            <button onClick={handleCheckout} className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-brown px-5 py-3.5 text-sm font-semibold text-white">Prosseguir para o checkout</button>
-            <Link href="/catalogo" className="mt-3 inline-flex w-full items-center justify-center rounded-full border border-[#f1e2df] px-5 py-3 text-sm font-medium text-brown">Continuar comprando</Link>
+            <button onClick={handleCheckout} className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-wine px-5 py-3.5 text-sm font-semibold text-white">Prosseguir para o checkout</button>
+            <Link href="/catalogo" className="mt-3 inline-flex w-full items-center justify-center rounded-full border border-[#EDE2D0] px-5 py-3 text-sm font-medium text-brown">Continuar comprando</Link>
           </aside>
         </div>
       )}

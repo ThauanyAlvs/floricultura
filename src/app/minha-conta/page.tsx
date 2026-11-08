@@ -33,23 +33,23 @@ export default function MyAccountPage() {
       </div>
 
       <div className="grid gap-8 lg:grid-cols-2">
-        <form onSubmit={handleSubmit} className="rounded-[28px] border border-[#f1e2df] bg-white p-6 shadow-soft">
+        <form onSubmit={handleSubmit} className="rounded-[28px] border border-[#EDE2D0] bg-white p-6 shadow-soft">
           <h2 className="text-2xl text-brown">Meu perfil</h2>
           <div className="mt-5 space-y-4">
-            <input value={fullName} onChange={(event) => setFullName(event.target.value)} className="w-full rounded-full border border-[#f1e2df] bg-[#fffaf8] px-4 py-3" placeholder="Nome completo" />
-            <input value={email} onChange={(event) => setEmail(event.target.value)} className="w-full rounded-full border border-[#f1e2df] bg-[#fffaf8] px-4 py-3" placeholder="E-mail" />
-            <input value={phone} onChange={(event) => setPhone(event.target.value)} className="w-full rounded-full border border-[#f1e2df] bg-[#fffaf8] px-4 py-3" placeholder="Telefone" />
+            <input value={fullName} onChange={(event) => setFullName(event.target.value)} className="w-full rounded-full border border-[#EDE2D0] bg-[#FAF8F3] px-4 py-3" placeholder="Nome completo" />
+            <input value={email} onChange={(event) => setEmail(event.target.value)} className="w-full rounded-full border border-[#EDE2D0] bg-[#FAF8F3] px-4 py-3" placeholder="E-mail" />
+            <input value={phone} onChange={(event) => setPhone(event.target.value)} className="w-full rounded-full border border-[#EDE2D0] bg-[#FAF8F3] px-4 py-3" placeholder="Telefone" />
             {message && <p className="text-sm text-[#2d6a46]">{message}</p>}
-            <button type="submit" className="rounded-full bg-brown px-5 py-3 text-sm font-semibold text-white">Salvar alterações</button>
+            <button type="submit" className="rounded-full bg-wine px-5 py-3 text-sm font-semibold text-white">Salvar alterações</button>
           </div>
         </form>
 
-        <div className="rounded-[28px] border border-[#f1e2df] bg-white p-6 shadow-soft">
+        <div className="rounded-[28px] border border-[#EDE2D0] bg-white p-6 shadow-soft">
           <h2 className="text-2xl text-brown">Alterar senha</h2>
           <div className="mt-5 space-y-4">
-            <input type="password" className="w-full rounded-full border border-[#f1e2df] bg-[#fffaf8] px-4 py-3" placeholder="Senha atual" />
-            <input type="password" className="w-full rounded-full border border-[#f1e2df] bg-[#fffaf8] px-4 py-3" placeholder="Nova senha" />
-            <input type="password" className="w-full rounded-full border border-[#f1e2df] bg-[#fffaf8] px-4 py-3" placeholder="Confirmar nova senha" />
+            <input type="password" className="w-full rounded-full border border-[#EDE2D0] bg-[#FAF8F3] px-4 py-3" placeholder="Senha atual" />
+            <input type="password" className="w-full rounded-full border border-[#EDE2D0] bg-[#FAF8F3] px-4 py-3" placeholder="Nova senha" />
+            <input type="password" className="w-full rounded-full border border-[#EDE2D0] bg-[#FAF8F3] px-4 py-3" placeholder="Confirmar nova senha" />
             <button className="rounded-full bg-wine px-5 py-3 text-sm font-semibold text-white">Atualizar senha</button>
           </div>
         </div>

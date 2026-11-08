@@ -5,15 +5,18 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        peach: '#F7C6B5',
-        blush: '#F6DDE1',
-        cream: '#FFF9F5',
-        sage: '#A8B9A0',
-        wine: '#7D4354',
-        brown: '#5C4540',
+        peach: '#EDE2D0',
+        blush: '#EDE2D0',
+        cream: '#FAF8F3',
+        champagne: '#EDE2D0',
+        rose: '#945D70',
+        gold: '#B69A70',
+        sage: '#B69A70',
+        wine: '#682C40',
+        brown: '#43383A',
       },
       boxShadow: {
-        soft: '0 20px 45px rgba(124, 71, 85, 0.12)',
+        soft: '0 20px 45px rgba(104, 44, 64, 0.08)',
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],

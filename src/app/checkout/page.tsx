@@ -159,13 +159,13 @@ export default function CheckoutPage() {
       </div>
 
       <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
-        <form onSubmit={handleSubmit} className="space-y-6 rounded-[28px] border border-[#f1e2df] bg-white p-6 shadow-soft">
+        <form onSubmit={handleSubmit} className="space-y-6 rounded-[28px] border border-[#EDE2D0] bg-white p-6 shadow-soft">
           <div>
             <h2 className="mb-4 text-2xl text-brown">1. Dados de entrega</h2>
             {savedAddresses.length > 0 && (
               <div className="mb-4 space-y-2">
                 {savedAddresses.map((entry) => (
-                  <button key={entry.id} type="button" onClick={() => setAddress({ ...entry })} className="flex w-full items-center justify-between rounded-full border border-[#f1e2df] bg-[#fffaf8] px-4 py-3 text-left text-sm text-[#5d4b4a]">
+                  <button key={entry.id} type="button" onClick={() => setAddress({ ...entry })} className="flex w-full items-center justify-between rounded-full border border-[#EDE2D0] bg-[#FAF8F3] px-4 py-3 text-left text-sm text-[#43383A]">
                     <span>{entry.street}, {entry.number} - {entry.city}/{entry.state}</span>
                     <span className="text-xs uppercase tracking-[0.14em] text-wine">{entry.isMain ? 'Principal' : 'Salvar'}</span>
                   </button>
@@ -173,24 +173,24 @@ export default function CheckoutPage() {
               </div>
             )}
             <div className="grid gap-4 md:grid-cols-2">
-              <input value={address.name} onChange={(event) => setAddress((current) => ({ ...current, name: event.target.value }))} className="rounded-full border border-[#f1e2df] bg-[#fffaf8] px-4 py-3" placeholder="Nome do destinatário" />
-              <input value={address.phone} onChange={(event) => setAddress((current) => ({ ...current, phone: event.target.value }))} className="rounded-full border border-[#f1e2df] bg-[#fffaf8] px-4 py-3" placeholder="Telefone de contato" />
+              <input value={address.name} onChange={(event) => setAddress((current) => ({ ...current, name: event.target.value }))} className="rounded-full border border-[#EDE2D0] bg-[#FAF8F3] px-4 py-3" placeholder="Nome do destinatário" />
+              <input value={address.phone} onChange={(event) => setAddress((current) => ({ ...current, phone: event.target.value }))} className="rounded-full border border-[#EDE2D0] bg-[#FAF8F3] px-4 py-3" placeholder="Telefone de contato" />
             </div>
 
             <div className="mt-4 flex gap-3">
-              <input value={address.cep} onChange={(event) => setAddress((current) => ({ ...current, cep: event.target.value }))} className="flex-1 rounded-full border border-[#f1e2df] bg-[#fffaf8] px-4 py-3" placeholder="CEP" />
-              <button type="button" onClick={handleCepLookup} className="rounded-full bg-[#f7d9cf] px-5 py-3 text-sm font-semibold text-brown">Buscar CEP</button>
+              <input value={address.cep} onChange={(event) => setAddress((current) => ({ ...current, cep: event.target.value }))} className="flex-1 rounded-full border border-[#EDE2D0] bg-[#FAF8F3] px-4 py-3" placeholder="CEP" />
+              <button type="button" onClick={handleCepLookup} className="rounded-full bg-[#EDE2D0] px-5 py-3 text-sm font-semibold text-brown">Buscar CEP</button>
             </div>
 
             <div className="mt-4 grid gap-4 md:grid-cols-2">
-              <input value={address.street} onChange={(event) => setAddress((current) => ({ ...current, street: event.target.value }))} className="md:col-span-2 rounded-full border border-[#f1e2df] bg-[#fffaf8] px-4 py-3" placeholder="Rua / Logradouro" />
-              <input value={address.number} onChange={(event) => setAddress((current) => ({ ...current, number: event.target.value }))} className="rounded-full border border-[#f1e2df] bg-[#fffaf8] px-4 py-3" placeholder="Número" />
-              <input value={address.complement} onChange={(event) => setAddress((current) => ({ ...current, complement: event.target.value }))} className="rounded-full border border-[#f1e2df] bg-[#fffaf8] px-4 py-3" placeholder="Complemento" />
-              <input value={address.district} onChange={(event) => setAddress((current) => ({ ...current, district: event.target.value }))} className="rounded-full border border-[#f1e2df] bg-[#fffaf8] px-4 py-3" placeholder="Bairro" />
-              <input value={address.city} onChange={(event) => setAddress((current) => ({ ...current, city: event.target.value }))} className="rounded-full border border-[#f1e2df] bg-[#fffaf8] px-4 py-3" placeholder="Cidade" />
-              <input value={address.state} onChange={(event) => setAddress((current) => ({ ...current, state: event.target.value }))} className="rounded-full border border-[#f1e2df] bg-[#fffaf8] px-4 py-3" placeholder="Estado" />
-              <input value={address.reference} onChange={(event) => setAddress((current) => ({ ...current, reference: event.target.value }))} className="md:col-span-2 rounded-full border border-[#f1e2df] bg-[#fffaf8] px-4 py-3" placeholder="Ponto de referência" />
-              <textarea value={address.notes} onChange={(event) => setAddress((current) => ({ ...current, notes: event.target.value }))} className="md:col-span-2 min-h-[110px] rounded-[24px] border border-[#f1e2df] bg-[#fffaf8] px-4 py-3" placeholder="Mensagem para acompanhar as flores" />
+              <input value={address.street} onChange={(event) => setAddress((current) => ({ ...current, street: event.target.value }))} className="md:col-span-2 rounded-full border border-[#EDE2D0] bg-[#FAF8F3] px-4 py-3" placeholder="Rua / Logradouro" />
+              <input value={address.number} onChange={(event) => setAddress((current) => ({ ...current, number: event.target.value }))} className="rounded-full border border-[#EDE2D0] bg-[#FAF8F3] px-4 py-3" placeholder="Número" />
+              <input value={address.complement} onChange={(event) => setAddress((current) => ({ ...current, complement: event.target.value }))} className="rounded-full border border-[#EDE2D0] bg-[#FAF8F3] px-4 py-3" placeholder="Complemento" />
+              <input value={address.district} onChange={(event) => setAddress((current) => ({ ...current, district: event.target.value }))} className="rounded-full border border-[#EDE2D0] bg-[#FAF8F3] px-4 py-3" placeholder="Bairro" />
+              <input value={address.city} onChange={(event) => setAddress((current) => ({ ...current, city: event.target.value }))} className="rounded-full border border-[#EDE2D0] bg-[#FAF8F3] px-4 py-3" placeholder="Cidade" />
+              <input value={address.state} onChange={(event) => setAddress((current) => ({ ...current, state: event.target.value }))} className="rounded-full border border-[#EDE2D0] bg-[#FAF8F3] px-4 py-3" placeholder="Estado" />
+              <input value={address.reference} onChange={(event) => setAddress((current) => ({ ...current, reference: event.target.value }))} className="md:col-span-2 rounded-full border border-[#EDE2D0] bg-[#FAF8F3] px-4 py-3" placeholder="Ponto de referência" />
+              <textarea value={address.notes} onChange={(event) => setAddress((current) => ({ ...current, notes: event.target.value }))} className="md:col-span-2 min-h-[110px] rounded-[24px] border border-[#EDE2D0] bg-[#FAF8F3] px-4 py-3" placeholder="Mensagem para acompanhar as flores" />
             </div>
           </div>
 
@@ -203,24 +203,24 @@ export default function CheckoutPage() {
             </div>
           </div>
 
-          {message && <p className="rounded-2xl bg-[#fbe8eb] px-3 py-2 text-sm text-[#7a3a46]">{message}</p>}
+          {message && <p className="rounded-2xl bg-[#EDE2D0] px-3 py-2 text-sm text-[#682C40]">{message}</p>}
 
-          <button type="submit" disabled={loading} className="inline-flex w-full items-center justify-center rounded-full bg-brown px-5 py-3.5 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-70">{loading ? 'Processando...' : 'Confirmar pedido'}</button>
+          <button type="submit" disabled={loading} className="inline-flex w-full items-center justify-center rounded-full bg-wine px-5 py-3.5 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-70">{loading ? 'Processando...' : 'Confirmar pedido'}</button>
         </form>
 
-        <aside className="rounded-[28px] border border-[#f1e2df] bg-white p-6 shadow-soft">
+        <aside className="rounded-[28px] border border-[#EDE2D0] bg-white p-6 shadow-soft">
           <h2 className="text-2xl text-brown">Resumo do pedido</h2>
           <div className="mt-5 space-y-4">
             {cart.map((item) => {
               const product = products.find((entry) => entry.id === item.productId);
               if (!product) return null;
               return (
-                <div key={item.productId} className="flex items-center justify-between gap-3 text-sm text-[#5f4b49]">
+                <div key={item.productId} className="flex items-center justify-between gap-3 text-sm text-[#43383A]">
                   <div className="flex items-center gap-3">
                     <img src={product.images[0]} alt={product.name} className="h-12 w-12 rounded-xl object-cover" />
                     <div>
                       <p>{product.name}</p>
-                      <p className="text-xs text-[#7a5f5d]">Qtde: {item.quantity}</p>
+                      <p className="text-xs text-[#43383A]">Qtde: {item.quantity}</p>
                     </div>
                   </div>
                   <span>{formatPrice(product.price * item.quantity)}</span>
@@ -229,13 +229,13 @@ export default function CheckoutPage() {
             })}
           </div>
 
-          <div className="mt-6 space-y-3 text-sm text-[#5f4b49] border-t border-[#f1e2df] pt-4">
+          <div className="mt-6 space-y-3 text-sm text-[#43383A] border-t border-[#EDE2D0] pt-4">
             <div className="flex justify-between"><span>Subtotal</span><span>{formatPrice(cartSubtotal)}</span></div>
             <div className="flex justify-between"><span>Frete</span><span>{formatPrice(shipping)}</span></div>
             <div className="flex justify-between font-semibold text-brown"><span>Total</span><span>{formatPrice(total)}</span></div>
           </div>
 
-          <div className="mt-6 rounded-[22px] bg-[#fffaf8] p-4 text-sm text-[#5f4b49]">
+          <div className="mt-6 rounded-[22px] bg-[#FAF8F3] p-4 text-sm text-[#43383A]">
             <p className="font-semibold text-brown">Entrega</p>
             <p className="mt-2">{address.street || 'Endereço ainda não informado'}</p>
             <p>{address.city || 'Cidade'} / {address.state || 'Estado'}</p>

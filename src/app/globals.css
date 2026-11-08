@@ -3,15 +3,17 @@
 @tailwind utilities;
 
 :root {
-  --background: #fff9f5;
-  --foreground: #5c4540;
-  --muted: #7d4354;
+  --background: #FAF8F3;
+  --foreground: #43383A;
+  --muted: #945D70;
   --card: #ffffff;
-  --accent: #f7c6b5;
-  --accent-soft: #f6dde1;
-  --sage: #a8b9a0;
-  --wine: #7d4354;
-  --brown: #5c4540;
+  --accent: #EDE2D0;
+  --accent-soft: #EDE2D0;
+  --sage: #B69A70;
+  --wine: #682C40;
+  --rose-wine: #945D70;
+  --gold: #B69A70;
+  --brown: #43383A;
 }
 
 html {
@@ -19,7 +21,7 @@ html {
 }
 
 body {
-  background: linear-gradient(180deg, #fff9f5 0%, #fffdfb 100%);
+  background: linear-gradient(180deg, #FAF8F3 0%, #FFFFFF 100%);
   color: var(--foreground);
   font-family: 'Inter', sans-serif;
 }
@@ -47,9 +49,9 @@ button, input, select, textarea {
 }
 
 .card-surface {
-  @apply rounded-[28px] border border-[#f3e8e2] bg-white shadow-soft;
+  @apply rounded-[28px] border border-[#EDE2D0] bg-white shadow-soft;
 }
 
 .bg-rose-glow {
-  background: linear-gradient(135deg, rgba(247,198,181,0.2), rgba(246,221,225,0.7));
+  background: linear-gradient(135deg, rgba(237,226,208,0.42), rgba(255,255,255,0.92));
 }

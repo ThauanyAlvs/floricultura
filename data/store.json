@@ -1,0 +1,32 @@
+{
+  "users": [
+    {
+      "id": "admin-1",
+      "fullName": "Admin PEACH",
+      "email": "admin@peachflowers.com",
+      "phone": "(11) 99999-0000",
+      "passwordHash": "db0d8f10a8557c47ea2e83174415f5f5:ff1de1e6750ab51ed231019a9e219d515dd66ddd93b48d719209a3551b26d0ca3ef320e0c2e1cd6504d5a05e007c656957d2fe46cb55ab1d6712059704b423fe",
+      "role": "admin",
+      "createdAt": "2026-11-08T22:54:18.651Z",
+      "emailVerified": true,
+      "marketingConsent": false,
+      "privacyAccepted": true
+    },
+    {
+      "id": "user-1794178458663",
+      "fullName": "Thauany Alves",
+      "email": "ttt@gmail.com",
+      "phone": "11963110178",
+      "passwordHash": "d0fcf357446a9a517f05dab69f9ebc6d:7bea72d9f1fa69ea9399b3c237bd9d934da889610a710c9b52a9627fe1cd947c9355d753f09a98e1f2f2ca17c60fec3b703d4672d02e43f5a35f452e4a06109f",
+      "role": "customer",
+      "createdAt": "2026-11-08T22:54:18.736Z",
+      "emailVerified": false,
+      "marketingConsent": false,
+      "privacyAccepted": true
+    }
+  ],
+  "addresses": [],
+  "favorites": [],
+  "carts": [],
+  "orders": []
+}

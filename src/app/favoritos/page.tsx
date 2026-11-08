@@ -12,11 +12,11 @@ export default function FavoritesPage() {
   if (!favoriteProducts.length) {
     return (
       <div className="container-shell py-20">
-        <div className="mx-auto max-w-2xl rounded-[30px] border border-[#f1e2df] bg-white p-10 text-center shadow-soft">
+        <div className="mx-auto max-w-2xl rounded-[30px] border border-[#EDE2D0] bg-white p-10 text-center shadow-soft">
           <p className="mb-2 text-sm font-semibold uppercase tracking-[0.24em] text-wine">Favoritos</p>
           <h1 className="text-4xl text-brown">Você ainda não salvou nenhum presente.</h1>
-          <p className="mt-3 text-[#684f4d]">Explore nossa seleção e salve os arranjos que mais combinam com você.</p>
-          <Link href="/catalogo" className="mt-6 inline-flex rounded-full bg-brown px-6 py-3 text-sm font-semibold text-white">Explorar catálogo</Link>
+          <p className="mt-3 text-[#43383A]">Explore nossa seleção e salve os arranjos que mais combinam com você.</p>
+          <Link href="/catalogo" className="mt-6 inline-flex rounded-full bg-wine px-6 py-3 text-sm font-semibold text-white">Explorar catálogo</Link>
         </div>
       </div>
     );
